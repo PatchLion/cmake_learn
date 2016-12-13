@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.0)
+
+PROJECT(dylib)
+
+AUX_SOURCE_DIRECTORY(. SRC_LIST)
+MESSAGE(${SRC_LIST})
+
+SET(SRC_LIST dylib.h dylib.cpp)
+
+ADD_LIBRARY(dylib SHARED ${SRC_LIST})
+
+SET(LIBRARY_OUTPUT_PATH ../../dll)
