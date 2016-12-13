@@ -1,8 +1,12 @@
+#ifndef static_h_
+#define static_h_
 #include <iostream>
 
-int main(int argc, char* argv[])
+class CStatic
 {
-    printf("Hello CMake\n");
-    
-    return 0;
-}
+public:
+    CStatic();
+    ~CStatic();
+};
+
+#endif

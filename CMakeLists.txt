@@ -1,4 +1,26 @@
 cmake_minimum_required(VERSION 3.0)
 
+MESSAGE("PATH = " $ENV{PATH})
+
+
+MESSAGE(${CMAKE_SYSTEM})
+MESSAGE(${CMAKE_SYSTEM_NAME})
+
+if(UNIX)
+	MESSAGE("System - unix")
+endif()
+
+if(WIN32) 
+	MESSAGE("System - win32")
+endif()
+
+EXEC_PROGRAM(ls ARGS "*.*" OUTPUT_VARIABLE LS_OUTPUT RETURN_VALUE LS_RVALUE)
+
+
+IF(LS_RVALUE)
+	MESSAGE(STATUS "is reuslt: " LS_OUTPUT)
+endif()
+
 ADD_SUBDIRECTORY(src)
 ADD_SUBDIRECTORY(staticlib)
+ADD_SUBDIRECTORY(dylib)

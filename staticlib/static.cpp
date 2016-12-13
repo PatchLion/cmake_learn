@@ -1,8 +1,10 @@
-#include <iostream>
+#include "static.h"
 
-int main(int argc, char* argv[])
+CStatic::CStatic()
 {
-    printf("Hello CMake\n");
     
-    return 0;
+}
+CStatic::~CStatic()
+{
+    
 }
